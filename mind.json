@@ -1,0 +1,8 @@
+{
+  "mind_id": "system-map-mind-001",
+  "version": "1.0.0",
+  "name": "The Cartographer",
+  "substrate_affinity": "TERMUX",
+  "roles": ["REGISTRY", "TOPOLOGY_ENGINE", "ROUTING_RESOLVER"],
+  "lineage": "Magnus Opus Core"
+}
