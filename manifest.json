@@ -1,19 +1,12 @@
 {
-  "api_version": "v1",
-  "capabilities": [
-    {
-      "action": "get_topology",
-      "description": "Returns full system graph including substrate locations"
-    },
-    {
-      "action": "resolve_endpoint",
-      "params": ["mind_name"],
-      "description": "Returns URI for a Mind to enable OS routing"
-    }
-  ],
-  "dependencies": ["system-health-mind"],
+  "name": "system-map-mind",
+  "capabilities": ["mapping", "inventory", "registry"],
   "endpoints": {
-    "local": "ipc:///tmp/magnus/system_map.sock",
-    "cloud": "https://api.magnus-opus.oci.local/map"
+    "get_map": "src/main.py",
+    "update_registry": "src/main.py"
+  },
+  "config": {
+    "federation_path": "/data/data/com.termux/files/home/magnus-opus/federation",
+    "memory_path": "gdrive:magnus-opus-memory/system-map"
   }
 }
